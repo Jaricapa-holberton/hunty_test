@@ -9,20 +9,22 @@ from django.views.generic import ListView, DetailView
 
 
 class ListCompany(ListView):
+
     """
     Creates a Blog object for render a template that list all the posts on the Blog model
     """
     model = Company
     template_name = 'company_list.html'
+
     def get(self, request):
         # Multiple Blogs
         companies = Company.objects.all()
         tempcomps = []
         # Converting `QuerySet` to a Python Dictionary
         for i in range(len(companies)):
-            tempcomps.append(CompanyToDictionary(companies[i])) # Converting `QuerySet` to a Python Dictionary
+            tempcomps.append(CompanyToDictionary(companies[i]))
 
-        return HttpResponse(json.dumps(tempcomps), content_type = "application/json")
+        return HttpResponse(json.dumps(tempcomps), content_type="application/json")
 
 
 class DetailCompany(DetailView):
@@ -30,7 +32,7 @@ class DetailCompany(DetailView):
     Creates a Blog object for render a template that display a specific post
     """
     model = Company
-    template_name = 'company_detail.html' 
+    template_name = 'company_detail.html'
 
     def dispatch(self, request, *args, **kwargs):
         self.CompanyId = kwargs['pk']
@@ -40,17 +42,17 @@ class DetailCompany(DetailView):
         """
         Add blog to context.
         """
-        comp = Company.objects.get(CompanyId = int(kwargs['pk']))
+        comp = Company.objects.get(CompanyId=int(kwargs['pk']))
         company = CompanyToDictionary(comp)
-        return HttpResponse(json.dumps(company), content_type = "application/json")
-    
+        return HttpResponse(json.dumps(company), content_type="application/json")
+
 
 class ListVacancy(ListView):
     """
     Creates a Blog object for render a template that list all the posts on the Blog model
     """
     model = Vacancy
-    template_name = 'vacancy_list.html'   
+    template_name = 'vacancy_list.html'
 
     def get(self, request):
         # Multiple Blogs
@@ -58,17 +60,17 @@ class ListVacancy(ListView):
         tempvacan = []
         # Converting `QuerySet` to a Python Dictionary
         for i in range(len(vacancies)):
-            tempvacan.append(VacancyToDictionary(vacancies[i])) # Converting `QuerySet` to a Python Dictionary
+            tempvacan.append(VacancyToDictionary(vacancies[i]))
 
-        return HttpResponse(json.dumps(tempvacan), content_type = "application/json")
-    
+        return HttpResponse(json.dumps(tempvacan), content_type="application/json")
+
 
 class DetailVacancy(DetailView):
     """
     Creates a Blog object for render a template that display a specific post
     """
     model = Vacancy
-    template_name = 'vacancy_detail.html' 
+    template_name = 'vacancy_detail.html'
 
     def dispatch(self, request, *args, **kwargs):
         self.VacancyId = kwargs['pk']
@@ -78,6 +80,6 @@ class DetailVacancy(DetailView):
         """
         Add blog to context.
         """
-        vacan = Vacancy.objects.get(VacancyId = int(kwargs['pk']))
+        vacan = Vacancy.objects.get(VacancyId=int(kwargs['pk']))
         vacancy = VacancyToDictionary(vacan)
-        return HttpResponse(json.dumps(vacancy), content_type = "application/json")
+        return HttpResponse(json.dumps(vacancy), content_type="application/json")

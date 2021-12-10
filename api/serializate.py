@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from datetime import datetime
 from .models import Company, Vacancy
 
+
 def CompanyToDictionary(company):
     """
     A utility function to convert object of type Blog to a Python Dictionary

@@ -13,7 +13,7 @@ class Company(TimeStampedModel, SoftDeletableModel):
     ContactLastName = models.CharField(max_length=100)
     ContactPhoneNumber = models.CharField(max_length=100)
     ContactEmail = models.EmailField()
-    
+
     def __str__(self):
         return self.Name
 
