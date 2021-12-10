@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>platzigram</title>
+{% endblock%}
+
+{% block container %}
+
+    <div class="container">
+        <div class="row">
+
+            {% for vacancy in object_list %}
+                {{ vacancy }}
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}

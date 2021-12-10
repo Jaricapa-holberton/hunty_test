@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>platzigram</title>
+{% endblock%}
+
+{% block container %}
+
+    <div class="container">
+        <h1>Esta es una prueba</h1>
+        <div class="row">
+            
+            {% for company in object_list %}
+                <br>
+                {{ company }}
+                <br>    
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}
