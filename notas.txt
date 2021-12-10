@@ -1,3 +1,5 @@
 https://www.delftstack.com/es/howto/django/django-create-json-response/
 
 https://davidcasr.medium.com/construir-un-api-rest-con-django-rest-framework-y-apiview-5ea4b2823307
+
+https://geekflare.com/es/expose-django-app-with-ngrok/
