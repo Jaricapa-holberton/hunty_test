@@ -9,9 +9,8 @@ from django.views.generic import ListView, DetailView
 
 
 class ListCompany(ListView):
-
     """
-    Creates a Blog object for render a template that list all the posts on the Blog model
+    Creates a Company object for render a template that list all the companies
     """
     model = Company
     template_name = 'company_list.html'
@@ -29,7 +28,7 @@ class ListCompany(ListView):
 
 class DetailCompany(DetailView):
     """
-    Creates a Blog object for render a template that display a specific post
+    Creates a Company object for render a template that display a specific company
     """
     model = Company
     template_name = 'company_detail.html'
@@ -49,7 +48,7 @@ class DetailCompany(DetailView):
 
 class ListVacancy(ListView):
     """
-    Creates a Blog object for render a template that list all the posts on the Blog model
+    Creates a Vacancy object for render a template that list all the vacancies
     """
     model = Vacancy
     template_name = 'vacancy_list.html'
@@ -67,7 +66,7 @@ class ListVacancy(ListView):
 
 class DetailVacancy(DetailView):
     """
-    Creates a Blog object for render a template that display a specific post
+    Creates a Vacancy object for render a template that display a specific vacancy
     """
     model = Vacancy
     template_name = 'vacancy_detail.html'

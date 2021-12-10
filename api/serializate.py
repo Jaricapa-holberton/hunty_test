@@ -6,7 +6,7 @@ from .models import Company, Vacancy
 
 def CompanyToDictionary(company):
     """
-    A utility function to convert object of type Blog to a Python Dictionary
+    A utility function to convert object of type Company to a Python Dictionary
     """
     output = {}
     output["CompanyId"] = company.CompanyId
@@ -25,7 +25,7 @@ def CompanyToDictionary(company):
 
 def VacancyToDictionary(vacancy):
     """
-    A utility function to convert object of type Blog to a Python Dictionary
+    A utility function to convert object of type Vacancy to a Python Dictionary
     """
     output = {}
     output["VacancyId"] = vacancy.VacancyId
