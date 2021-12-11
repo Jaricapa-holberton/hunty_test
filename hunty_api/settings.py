@@ -22,7 +22,7 @@ SECRET_KEY = 'im4io(oyfwqj1c2oj1d8lw9t40mrixtc*0+tczcp14(y561lq7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'eb-django-app-dev.elasticbeanstalk.com']
 
 
 # Application definition
