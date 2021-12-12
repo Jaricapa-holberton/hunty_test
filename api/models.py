@@ -3,11 +3,9 @@ from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 
 class Company(TimeStampedModel, SoftDeletableModel):
-
     """
     Company model object
     """
-
     CompanyId = models.IntegerField()
     Name = models.CharField(max_length=100)
     Link = models.URLField()
@@ -24,11 +22,9 @@ class Company(TimeStampedModel, SoftDeletableModel):
 
 
 class Vacancy(TimeStampedModel, SoftDeletableModel):
-
     """
     Vacancy model object
     """
-
     VacancyId = models.IntegerField()
     PositionName = models.CharField(max_length=100)
     VacancyLink = models.URLField()

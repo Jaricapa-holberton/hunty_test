@@ -22,7 +22,7 @@ SECRET_KEY = 'im4io(oyfwqj1c2oj1d8lw9t40mrixtc*0+tczcp14(y561lq7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'django-env.eba-3jbqjfhu.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*', 'hunti-api6.eba-kmqfmujy.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -72,9 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hunty_api.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# coment the database in local for allow deploy the app in aws
+# https://stackoverflow.com/questions/40142840/django-internal-server-500-error-aws-elastic-beanstalk-issue
 
 DATABASES = {
     'default': {
@@ -122,9 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
