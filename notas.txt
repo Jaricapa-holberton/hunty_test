@@ -11,3 +11,5 @@ https://www.youtube.com/watch?v=LIxKxUq9GtA
 https://stackoverflow.com/questions/40142840/django-internal-server-500-error-aws-elastic-beanstalk-issue
 
 https://stackoverflow.com/questions/19997343/run-manage-py-from-aws-eb-linux-instance
+
+https://realpython.com/django-hosting-on-heroku/
