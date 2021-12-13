@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>Hunty-API</title>
+{% endblock%}
+<!DOCTYPE html>
+{% block container %}
+    <div class="container">
+        <h1>Hola</h1>
+        <br>
+        <h3>Esta es una API diseñada para hacer consultas acerca de compañias y sus vacantes de empleo disponibles</h3>
+        <h5>Para usarla, haz click en el boton de la base de datos de tu interes</h5>
+        <a href="{% url 'api:list-companies' %}"><button class="btn btn-primary btn-lg">Compañias</button></a>
+        <a href="{% url 'api:list-vacancies' %}"><button class="btn btn-secondary btn-lg">Vacantes</button></a>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>platzigram</title>
+{% endblock%}
+<!DOCTYPE html>
+{% block container %}
+
+    <div class="container">
+        <h1>Gracias por usar nuestra API</h1>
+        <br>
+        <h3>Hay dos bases de datos diponibles para consultar: Compañias y Vacantes</h3>
+        <h5>Para consultar cada base de datos, haz click en el boton con el nombre de la base a consultar</h5>
+        <a href="{% url 'api:list-companies' %}"><button class="btn btn-danger btn-lg">Compañias</button></a>
+        <a href="{% url 'api:list-vacancies' %}"><button class="btn btn-danger btn-lg">Vacantes</button></a>
+    </div>
+
+{% endblock %}

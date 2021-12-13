@@ -1,3 +1,6 @@
+from api.views import HomeView
+from django.urls import path
+from django.views.generic import TemplateView
 """hunty_api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,5 +23,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
+    path('', HomeView.as_view(), name='home'),
+    path('api/', include('api.urls'), name='api'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -5,7 +5,11 @@ from django.http import HttpResponse
 import json
 from .models import Company, Vacancy
 from .serializate import CompanyToDictionary, VacancyToDictionary
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
+from django.urls import path
+
+class HomeView(TemplateView):
+    template_name = "home.html"
 
 
 class ListCompany(ListView):
