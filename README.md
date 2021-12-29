@@ -1,10 +1,7 @@
 # Hunty_Test
 
-#### Video Demo:  
-<https://www.youtube.com/watch?v=QdZHWHps21g>
-
 #### Description:
-Hunty_Test is is an api designed to query vacancies and available companies in a test database. This was developed as a technical test for the Hunty company.
+Hunty_Test is an api designed to query vacancies and available companies in a test database. This was developed as a technical test for the Hunty company.
 
 * Retrive all the companies or vacancies from the test database
 * Retrive specific companies or vacancies from the test database
